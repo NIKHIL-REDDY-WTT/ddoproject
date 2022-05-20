@@ -14,6 +14,8 @@ public class RegistrationRequest {
     private final String Lastname;
     private final String email;
     private final String Password;
+    private final String Mobilenumber;
+    private final String Designation;
 
     //    public ResgistrationsRequest(String firstname, String lastname, String email, String password) {
     //        this.firstname = firstname;
