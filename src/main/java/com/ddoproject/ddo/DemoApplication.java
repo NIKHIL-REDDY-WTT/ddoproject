@@ -14,12 +14,6 @@ public class DemoApplication implements CommandLineRunner {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	/**
-	 * Callback used to run the bean.
-	 *
-	 * @param args incoming main method arguments
-	 * @throws Exception on error
-	 */
 	@Override
 	public void run(String... args) throws Exception {
 		String sql = "INSERT INTO ddo_year(ddo_year_id, ddo_client_id,ddo_org_id,isactive,year,financialyear)VALUES (2018, 18,1000008,'y',2019,2024);";
