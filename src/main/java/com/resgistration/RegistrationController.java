@@ -7,11 +7,11 @@ import lombok.AllArgsConstructor;
 
 
 @RestController
-@RequestMapping (path="api/resgitrations")
+@RequestMapping (path="api/registrations")
 @AllArgsConstructor
-public class ResgistraionController {
-    private ResgistrationService resgistrationsService;
-    public String resgister(@RequestBody ResgistrationRequest request) {
-        return resgistrationsService.register(request);
+public class RegistrationController {
+    private RegistrationService registrationService;
+    public String register(@RequestBody RegistrationRequest request) {
+        return registrationService.register(request);
     }
 }
