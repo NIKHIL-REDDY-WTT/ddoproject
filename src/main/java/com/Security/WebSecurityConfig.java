@@ -23,7 +23,7 @@ private final BCryptPasswordEncoder bCryptPasswordEncoder;
         http
                 .csrf().disable() //to send post request
                 .authorizeRequests()
-                .antMatchers( "/api/v*/ddoregistration/v**")
+                .antMatchers( "/api/v*/registration/v**")
                 .permitAll()
                 .anyRequest()
                 .authenticated().and()
