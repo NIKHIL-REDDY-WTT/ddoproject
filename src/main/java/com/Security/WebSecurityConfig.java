@@ -16,7 +16,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
+private final UserService userService;
 private final BCryptPasswordEncoder bCryptPasswordEncoder;
     @Override
     protected void configure(HttpSecurity http) throws Exception{
@@ -37,7 +37,7 @@ private final BCryptPasswordEncoder bCryptPasswordEncoder;
     public DaoAuthenticationProvider daoAuthenticationProvider(){
     DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
     provider.setPasswordEncoder(bCryptPasswordEncoder);
-   // provider.setUserDetailsPasswordService(userService);
+    provider.setUserDetailsService(userService);
     return provider;
     }
 }
