@@ -13,7 +13,7 @@ import java.sql.Time;
 import java.util.Collection;
 import java.util.Collections;
 
-public class User {
+
 
 
     @Getter
@@ -21,7 +21,7 @@ public class User {
     @EqualsAndHashCode
     @NoArgsConstructor
     @Entity
-    public class Users implements UserDetails {
+    public class User implements UserDetails {
         @SequenceGenerator(
                 name = "employee_sequence",
                 sequenceName = "employee_sequence",
@@ -54,7 +54,7 @@ public class User {
         private Boolean enabled = false;
 
 
-        public Users(Long clientId, Long orgId, Long employeeId, String userName, String password, String email, String key, Character isAdmin, Character isActive, Character isReference, Time created, Long createdBy, Time updated, Long updatedBy, UserRole userRole, Boolean locked, Boolean enabled) {
+        public User(Long clientId, Long orgId, Long employeeId, String userName, String password, String email, String key, Character isAdmin, Character isActive, Character isReference, Time created, Long createdBy, Time updated, Long updatedBy, UserRole userRole, Boolean locked, Boolean enabled) {
             this.clientId = clientId;
             this.orgId = orgId;
             this.employeeId = employeeId;
@@ -111,4 +111,4 @@ public class User {
             return enabled;
         }
     }
-}
+

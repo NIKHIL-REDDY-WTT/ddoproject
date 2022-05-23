@@ -10,8 +10,10 @@ import org.springframework.stereotype.Service;
     @AllArgsConstructor
 
     public class UserService implements UserDetailsService {
+
         private final static String USER_NOT_FOUND_NSG = "User not found";
         private final UserRepository userRepository;
+        private UserRepository usersRepository;
 
         @Override
         public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
