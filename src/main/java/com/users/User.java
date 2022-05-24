@@ -13,9 +13,6 @@ import java.sql.Time;
 import java.util.Collection;
 import java.util.Collections;
 
-
-
-
     @Getter
     @Setter
     @EqualsAndHashCode
@@ -26,27 +23,40 @@ import java.util.Collections;
                 name = "employee_sequence",
                 sequenceName = "employee_sequence",
                 allocationSize = 1
+
         )
         @Id
-        @GeneratedValue(
-                strategy = GenerationType.SEQUENCE,
-                generator = "employee_sequence"
-        )
-        private Long ddoUserId;
-        private Long clientId;
-        private Long orgId;
-        private Long employeeId;
+        @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "employee_sequence")
+        @Column(name="ddo_user_id")
+        private int ddoUserId;
+        @Column(name="ddo_client_id")
+        private int clientId;
+        @Column(name="ddo_org_id")
+        private int orgId;
+        @Column(name="ddo_employee_id")
+        private int employeeId;
+        @Column(name="username")
         private String userName;
+        @Column(name="password")
         private String password;
+        @Column(name="email")
         private String email;
+        @Column(name="key")
         private String key;
-        private Character isAdmin;
-        private Character isActive;
-        private Character isReference;
+        @Column(name="isadmin")
+        private char isadmin;
+        @Column(name="isactive")
+        private char isactive;
+        @Column(name="isreference")
+        private char isReference;
+        @Column(name="created")
         private Time created;
-        private Long createdBy;
+        @Column(name="createdby")
+        private int  createdBy;
+        @Column(name="updated")
         private Time updated;
-        private Long updatedBy;
+        @Column(name="updatedby")
+        private int updatedBy;
 
         @Enumerated(EnumType.STRING)
         private UserRole userRole;
@@ -54,7 +64,7 @@ import java.util.Collections;
         private Boolean enabled = false;
 
 
-        public User(Long clientId, Long orgId, Long employeeId, String userName, String password, String email, String key, Character isAdmin, Character isActive, Character isReference, Time created, Long createdBy, Time updated, Long updatedBy, UserRole userRole, Boolean locked, Boolean enabled) {
+        public User(int clientId, int orgId, int employeeId, String userName, String password, String email, String key, Character isAdmin, Character isActive, Character isReference, Time created, int createdBy, Time updated, int updatedBy, UserRole userRole, Boolean locked, Boolean enabled) {
             this.clientId = clientId;
             this.orgId = orgId;
             this.employeeId = employeeId;
@@ -62,8 +72,8 @@ import java.util.Collections;
             this.password = password;
             this.email = email;
             this.key = key;
-            this.isAdmin = isAdmin;
-            this.isActive = isActive;
+          //  this.isAdmin = isAdmin;
+           // this.isActive = isActive;
             this.isReference = isReference;
             this.created = created;
             this.createdBy = createdBy;
