@@ -1,4 +1,4 @@
-package com.Security;
+package com.resgistration.Security;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;

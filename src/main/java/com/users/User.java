@@ -63,8 +63,10 @@ import java.util.Collections;
         private Boolean locked = false;
         private Boolean enabled = false;
 
-
-        public User(int clientId, int orgId, int employeeId, String userName, String password, String email, String key, Character isAdmin, Character isActive, Character isReference, Time created, int createdBy, Time updated, int updatedBy, UserRole userRole, Boolean locked, Boolean enabled) {
+        private User(int ddoUserId, int clientId, int orgId, int employeeId, String userName, String password, String email, String key, char isadmin,
+                char isactive, char isReference, Time created, int createdBy, Time updated, int updatedBy, UserRole userRole, Boolean locked,
+                Boolean enabled) {
+            this.ddoUserId = ddoUserId;
             this.clientId = clientId;
             this.orgId = orgId;
             this.employeeId = employeeId;
@@ -72,8 +74,8 @@ import java.util.Collections;
             this.password = password;
             this.email = email;
             this.key = key;
-          //  this.isAdmin = isAdmin;
-           // this.isActive = isActive;
+            this.isadmin = isadmin;
+            this.isactive = isactive;
             this.isReference = isReference;
             this.created = created;
             this.createdBy = createdBy;
@@ -82,6 +84,12 @@ import java.util.Collections;
             this.userRole = userRole;
             this.locked = locked;
             this.enabled = enabled;
+        }
+
+        public User(String userName, String email, String password, UserRole user) {
+            this.userName=userName;
+            this.email=email;
+            this.password=password;
         }
 
         @Override

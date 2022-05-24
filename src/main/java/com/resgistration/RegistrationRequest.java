@@ -1,5 +1,6 @@
 package com.resgistration;
 
+import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -9,13 +10,14 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
+@Table(name="ddo_user")
 public class RegistrationRequest {
-    private final String firstName;
-    private final String lastName;
+    private final String userName;
+   // private final String lastName;
     private final String email;
     private final String password;
-    private final String mobileNumber;
-    private final String designation;
+    //private final String mobileNumber;
+   // private final String designation;
 
     //    public ResgistrationsRequest(String firstname, String lastname, String email, String password) {
     //        this.firstname = firstname;
