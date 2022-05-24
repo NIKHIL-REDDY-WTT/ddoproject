@@ -1,6 +1,9 @@
 package com.resgistration;
 
 import org.springframework.stereotype.Service;
+import com.Security.ConfirmationTokenService;
+import com.email.EmailSender;
+import com.email.EmailValidator;
 import com.users.UserService;
 import lombok.AllArgsConstructor;
 
@@ -8,12 +11,6 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class RegistrationService {
   private final UserService userService;
-
-
-
-
-    String register(RegistrationRequest request) {
-        return "it works";
-
-    }
-}
+    private final EmailValidator emailValidator;
+    private final ConfirmationTokenService confirmationTokenService;
+    private final EmailSender emailSender;}
