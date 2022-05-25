@@ -1,15 +1,8 @@
-package com.resgistration;
+package com.ddoproject.ddo;
 
 import java.time.LocalDateTime;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.resgistration.Security.ConfirmationToken;
-import com.resgistration.Security.ConfirmationTokenService;
-import com.email.EmailSender;
-import com.email.EmailValidator;
-import com.users.User;
-import com.users.UserRole;
-import com.users.UserService;
 import lombok.AllArgsConstructor;
 
 @Service

@@ -1,4 +1,4 @@
-package com.users;
+package com.ddoproject.ddo;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -9,8 +9,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import com.resgistration.Security.ConfirmationToken;
-import com.resgistration.Security.ConfirmationTokenService;
 
 @Service
     @AllArgsConstructor

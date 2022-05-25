@@ -1,4 +1,4 @@
-package com.email;
+package com.ddoproject.ddo;
 
 import java.util.function.Predicate;
 

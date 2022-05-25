@@ -1,4 +1,4 @@
-package com.resgistration.Security;
+package com.ddoproject.ddo;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

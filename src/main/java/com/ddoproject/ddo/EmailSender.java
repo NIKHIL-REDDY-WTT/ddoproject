@@ -1,4 +1,4 @@
-package com.email;
+package com.ddoproject.ddo;
 
 public interface EmailSender {
     void send(String to, String email);

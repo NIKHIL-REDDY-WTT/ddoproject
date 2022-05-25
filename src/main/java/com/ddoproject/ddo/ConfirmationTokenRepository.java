@@ -1,4 +1,4 @@
-package com.resgistration.Security;
+package com.ddoproject.ddo;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -17,7 +17,4 @@ public interface ConfirmationTokenRepository  extends JpaRepository<Confirmation
             "WHERE c.token = ?1")
     int updateConfirmedAt(String token,
             LocalDateTime confirmedAt);
-
-
-
 }

@@ -1,4 +1,4 @@
-package com.resgistration.Security;
+package com.ddoproject.ddo;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;
@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
-import com.users.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

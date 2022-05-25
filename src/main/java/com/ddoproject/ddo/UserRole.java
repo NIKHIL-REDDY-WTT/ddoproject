@@ -1,4 +1,4 @@
-package com.users;
+package com.ddoproject.ddo;
 
 public enum UserRole {
     USER,

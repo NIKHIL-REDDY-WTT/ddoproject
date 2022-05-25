@@ -1,4 +1,4 @@
-package com.users;
+package com.ddoproject.ddo;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
